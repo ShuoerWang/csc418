@@ -27,7 +27,7 @@ void rgb_to_hsv(
     else if (max == g1) {
         h = (((b1 - r1) / dif) + 2) * 60.0;
     }
-    else if (max = b1) {
+    else if (max == b1) {
         h = (((r1 - g1) / dif) + 4) * 60.0;
     }
     v = max;
