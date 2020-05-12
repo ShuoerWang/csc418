@@ -1,0 +1,1 @@
+{"Assignment 1":{"required":["rgba_to_rgb.cpp","write_ppm.cpp","reflect.cpp","rotate.cpp","rgb_to_gray.cpp","rgb_to_hsv.cpp","hsv_to_rgb.cpp","hue_shift.cpp","desaturate.cpp","simulate_bayer_mosaic.cpp","demosaic.cpp","over.cpp"],"required_only":true}}
