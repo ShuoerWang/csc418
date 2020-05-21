@@ -9,8 +9,8 @@ bool Triangle::intersect(
   Eigen::Vector3d p1 = std::get<0>(corners);
   Eigen::Vector3d p2 = std::get<1>(corners);
   Eigen::Vector3d p3 = std::get<2>(corners);
-  Eigen::Vector3d v1 = p3 - p1;
-  Eigen::Vector3d v2 = p2 - p1;
+  Eigen::Vector3d v1 = p1 - p2;
+  Eigen::Vector3d v2 = p1 - p3;
   
   double a = p1[0] - p2[0];
   double b = p1[1] - p2[1];
@@ -26,8 +26,8 @@ bool Triangle::intersect(
   double l = p1[2] - ray.origin[2];
 
   double M = a * (e * i - h * f) + b * (g * f - d * i) + c * (d * h - e * g);
-  double temp = (-1) * (f * (a * k - j * b) + e * (j * c - a * l) + d * (b * l - k * c))/M;
-  double beta = (j * (e * i - h * f) + k * (g * f - d * i) + l * (d * h - e * g)) /M;
+  double temp = - (f * (a * k - j * b) + e * (j * c - a * l) + d * (b * l - k * c)) / M;
+  double beta = (j * (e * i - h * f) + k * (g * f - d * i) + l * (d * h - e * g)) / M;
   double gamma = (i * (a * k - j * b) + h * (j * c - a * l) + g * (b * l - k * c)) / M;
 
   if(temp < min_t){
@@ -42,7 +42,7 @@ bool Triangle::intersect(
     return false;
   }
   t = temp;
-  n = v1.cross(v2).normalized();
+  n = v1.cross(v2)/(v1.cross(v2).norm());
   return true;
 
 
