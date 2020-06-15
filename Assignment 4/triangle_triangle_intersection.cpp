@@ -11,6 +11,7 @@ bool triangle_triangle_intersection(
 {
   ////////////////////////////////////////////////////////////////////////////
   // Replace with your code here:
+  
     double t;
     return ray_intersect_triangle(Ray(A0, A2 - A0), B0, B1, B2, 0.0, 1.0, t) ||
         ray_intersect_triangle(Ray(A1, A0 - A1), B0, B1, B2, 0.0, 1.0, t) ||

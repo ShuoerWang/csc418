@@ -14,6 +14,7 @@ void insert_triangle_into_box(
   B.max_corner[1] = fmax(fmax(a[1], b[1]), fmax(c[1], B.max_corner[1]));
   B.min_corner[2] = fmin(fmin(a[2], b[2]), fmin(c[2], B.min_corner[2]));
   B.max_corner[2] = fmax(fmax(a[2], b[2]), fmax(c[2], B.max_corner[2]));
+  
   ////////////////////////////////////////////////////////////////////////////
 }
 

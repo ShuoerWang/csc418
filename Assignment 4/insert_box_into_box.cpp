@@ -12,6 +12,7 @@ void insert_box_into_box(
 	B.max_corner[1] = std::max(B.max_corner[1], A.max_corner[1]);
 	B.min_corner[2] = std::min(B.min_corner[2], A.min_corner[2]);
 	B.max_corner[2] = std::max(B.max_corner[2], A.max_corner[2]);
+	
   ////////////////////////////////////////////////////////////////////////////
 }
 
