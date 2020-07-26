@@ -27,7 +27,7 @@ float improved_perlin_noise( vec3 st)
     product[i] = dot(gradient, vector);
   }
 
-  vec3 temp = smooth_step(fract(st));
+  vec3 temp = improved_smooth_step(fract(st));
 
   float itp1 = mix(product[0], product[1], temp.x);
   float itp2 = mix(product[2], product[3], temp.x);
